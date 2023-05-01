@@ -3,21 +3,21 @@
     <form action="">
       <div mb-3>
         <label for="" class="form-label"> Page Title </label>
-        <input
-          type="text"
-          class="form-control"
-          :value="pageTitle"
-          @input="(e) => (pageTitle = e.target.value)"
-        />
+        <input type="text" class="form-control" v-model="pageTitle" />
       </div>
       <div mb-3>
         <label for="" class="form-label"> Content </label>
-        <textarea type="text" class="form-control" rows="5"></textarea>
+        <textarea
+          type="text"
+          class="form-control"
+          rows="5"
+          v-model="content"
+        ></textarea>
       </div>
       <div mb-3>
         <button
           class="btn btn-primary"
-          @click.prevent="pageCreated({ pageTitle })"
+          @click.prevent="pageCreated({ pageTitle, content })"
         >
           Create Page
         </button>
@@ -32,6 +32,7 @@ export default {
   data() {
     return {
       pageTitle: "",
+      content: "",
     };
   },
 };
