@@ -5,6 +5,7 @@
     :nav-link-click="(index) => (activePage = index)"
   >
   </app-navbar>
+
   <page-viewer v-if="pages.length > 0" :page="pages[activePage]"></page-viewer>
 </template>
 
