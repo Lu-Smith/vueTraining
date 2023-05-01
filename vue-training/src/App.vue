@@ -1,20 +1,20 @@
 <template>
-  <navbar
+  <app-navbar
     :pages="pages"
     :active-page="activePage"
     :nav-link-click="(index) => (activePage = index)"
   >
-  </navbar>
+  </app-navbar>
   <page-viewer :page="pages[activePage]"></page-viewer>
 </template>
 
 <script>
 import PageViewer from "./components/PageViewer.vue";
-import Navbar from "./components/Navbar.vue";
+import AppNavbar from "./components/AppNavbar.vue";
 
 export default {
   components: {
-    Navbar,
+    AppNavbar,
     PageViewer,
   },
   data() {
