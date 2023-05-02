@@ -2,16 +2,19 @@
   {
     "link": { "text": "Home", "url": "index.html" },
     "pageTitle": "Hello, Vue",
-    "content": "Welcome to a wonderful world of View"
+    "content": "Welcome to a wonderful world of View",
+    "published": true
   },
   {
     "link": { "text": "About", "url": "about.html" },
     "pageTitle": "About",
-    "content": "Welcome to about page"
+    "content": "Welcome to about page",
+    "published": true
   },
   {
     "link": { "text": "Contact", "url": "contact.html" },
     "pageTitle": "Contact",
-    "content": "Contact me"
+    "content": "Contact me",
+    "published": false
   }
 ]
