@@ -5,18 +5,15 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">My Vue</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li
+        <navbar-link
+          :page="page"
+          :isActive="activePage == index"
+          @click.prevent="navLinkClick(index)"
           v-for="(page, index) in publishedPages"
           class="nav-item"
           :key="index"
         >
-          <navbar-link
-            :page="page"
-            :isActive="activePage == index"
-            @click.prevent="navLinkClick(index)"
-          >
-          </navbar-link>
-        </li>
+        </navbar-link>
       </ul>
       <form class="d-flex">
         <button class="btn btn-primary" @click.prevent="changeTheme">
