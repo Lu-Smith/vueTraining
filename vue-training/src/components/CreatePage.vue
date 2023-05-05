@@ -51,7 +51,11 @@
 
 <script>
 export default {
-  props: ["pageCreated"],
+  emits: {
+    pageCreated() {
+      return true;
+    },
+  },
   computed: {
     isFormInvalid() {
       return (
@@ -74,7 +78,7 @@ export default {
         alert("Please fill the form.");
         return;
       }
-      this.pageCreated({
+      this.$emit("pageCreated", {
         pageTitle: this.pageTitle,
         content: this.content,
         link: {
@@ -83,6 +87,7 @@ export default {
         },
         published: this.published,
       });
+
       this.pageTitle = "";
       this.content = "";
       this.linkText = "";
