@@ -32,7 +32,7 @@
               type="checkbox"
               v-model="published"
             />
-            <label class="form-check-label" for="gridCkeck1">Published</label>
+            <label class="form-check-label" for="checkbox">Published</label>
           </div>
         </div>
       </div>
