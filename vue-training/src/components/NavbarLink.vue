@@ -6,6 +6,7 @@
       aria-current="page"
       v-bind:href="page.link.url"
       :title="`This link goes to the ${page.link.text} page`"
+      @click.prevent="$bus.$emit('navbarLinkActivated', index)"
       >{{ page.link.text }}</a
     >
   </li>
@@ -13,7 +14,7 @@
 
 <script>
 export default {
-  props: ["page", "isActive"],
+  props: ["page", "index", "isActive"],
   computed: {
     activeClasses() {
       return {

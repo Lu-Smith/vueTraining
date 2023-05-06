@@ -7,8 +7,9 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <navbar-link
           :page="page"
+          :index="index"
           :isActive="activePage == index"
-          @click.prevent="navLinkClick(index)"
+          @activated="$emit('activated')"
           v-for="(page, index) in publishedPages"
           class="nav-item"
           :key="index"
@@ -38,7 +39,7 @@ export default {
       return this.pages.filter((p) => p.published);
     },
   },
-  props: ["pages", "activePage", "navLinkClick"],
+  props: ["pages", "activePage"],
   data() {
     return {
       theme: "dark",
